@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  cursor: text;
+}
+
+button,
+input,
+textarea,
+select {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.34px;
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  &::-moz-focus-inner,
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+b {
+  font-weight: 700;
+}
+
+#app {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: column;
+}

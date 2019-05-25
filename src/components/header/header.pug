@@ -1,0 +1,12 @@
+header.header
+  picture.header__banner-img
+    source(media='(min-width: 1024px)', srcset='../../assets/header/header-background.jpg', type='image/jpg')
+    source(media='(min-width: 768px)', srcset='../../assets/header/header-background.jpg', type='image/jpg')
+    source(media='(min-width: 320px)', srcset='../../assets/header/header-background.jpg', type='image/jpg')
+    img(src='../../assets/header/header-background.jpg', alt='alt')
+  .content.header__content
+    h1 {{info.title}}
+
+    .header__button-section
+      CoreButton(v-bind:info= 'btnEvent')
+      CoreButton(v-bind:info= 'btnRefresh')
