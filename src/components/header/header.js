@@ -1,3 +1,10 @@
+import template from './header.pug';
+import './header.scss';
+
+export function test() {
+  console.log(template());
+}
+
 export default {
   name: 'Header',
   data () {
@@ -17,4 +24,5 @@ export default {
       }
     }
   },
+  template: template(),
 }

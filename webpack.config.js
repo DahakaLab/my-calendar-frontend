@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const pugIncludeGlob = require('pug-include-glob');
 
 module.exports = {
   entry: './src/autoload.js',
@@ -12,51 +13,9 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
-        loader: 'pug-plain-loader'
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ],
-      },
-      {
-        test: /\.sass$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader?indentedSyntax'
-        ],
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'pug-loader',
         options: {
-          loaders: {
-            // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-            // the "scss" and "sass" values for the lang attribute to the right configs here.
-            // other preprocessors should work out of the box, no loader config like this necessary.
-            'scss': [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader'
-            ],
-            'sass': [
-              'vue-style-loader',
-              'css-loader',
-              'sass-loader?indentedSyntax'
-            ]
-          }
-          // other vue-loader options go here
+          plugins:[pugIncludeGlob()]
         }
       },
       {
@@ -70,14 +29,26 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ]
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+      },
     ]
   },
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    extensions: ['*', '.js', '.json']
   },
   devServer: {
     historyApiFallback: true,
@@ -88,11 +59,10 @@ module.exports = {
     hints: false
   },
   devtool: '#eval-source-map'
-}
+};
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
+  module.exports.devtool = '#source-map';
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
