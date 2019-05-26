@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App.vue'
+import Index from './pages/index/index';
 
 require('./autoload.scss');
 
@@ -7,6 +7,6 @@ const rootVueEl = document.querySelector('.root');
 if (rootVueEl) {
   new Vue({
     el: rootVueEl,
-    render: h => h(App)
+    render: h => h(Index)
   });
 }
