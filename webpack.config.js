@@ -24,6 +24,13 @@ module.exports = (NODE_ENV) => {
           loader: "eslint-loader",
         },
         {
+          enforce: "pre",
+          test: /\.pug$/,
+          exclude: /node_modules/,
+          loader: "pug-lint-loader",
+          options: require('./.pug-lintrc.js'),
+        },
+        {
           test: /\.pug$/,
           loader: 'pug-loader',
           options: {
