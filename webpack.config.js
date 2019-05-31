@@ -1,8 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const pugIncludeGlob = require('pug-include-glob');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = (NODE_ENV) => {
+  const pluginsOptions = [
+    new StyleLintPlugin()
+  ];
+
   const config = {
     entry: './src/autoload.js',
     output: {
@@ -57,6 +62,7 @@ module.exports = (NODE_ENV) => {
       },
       extensions: ['*', '.js', '.json']
     },
+    plugins: pluginsOptions,
     devServer: {
       historyApiFallback: true,
       noInfo: true,
