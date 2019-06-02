@@ -1,12 +1,12 @@
-import template from './h1.pug';
-import './h1.scss';
+import template from './h4.pug';
+import './h4.scss';
 
 export default {
-  name: 'H1',
+  name: 'H4',
   data() {
     return {
       info: {
-        title: 'H1',
+        title: 'H4',
       },
     };
   },
