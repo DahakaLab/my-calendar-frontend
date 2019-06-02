@@ -1,6 +1,9 @@
+import template from './header.pug';
+import './header.scss';
+
 export default {
   name: 'Header',
-  data () {
+  data() {
     return {
       info: {
         title: 'Header',
@@ -13,8 +16,9 @@ export default {
       btnRefresh: {
         btnType: 'button',
         main: false,
-        text: 'Обновить'
-      }
-    }
+        text: 'Обновить',
+      },
+    };
   },
-}
+  template: template(),
+};

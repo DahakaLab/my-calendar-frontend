@@ -1,0 +1,13 @@
+{
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "rules": {
+    "linebreak-style": 0,
+    "no-new": 0
+  }
+}
