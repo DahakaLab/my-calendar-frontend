@@ -54,7 +54,13 @@ module.exports = (NODE_ENV) => {
           use: [
             "style-loader",
             "css-loader",
-            "sass-loader"
+            {
+              loader: "sass-loader",
+              options: {
+                data: '@import "./src/autoload.scss";',
+                includePaths:[__dirname, './src']
+              }
+            }
           ]
         },
         {
