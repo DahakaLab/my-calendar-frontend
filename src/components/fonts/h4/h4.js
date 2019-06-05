@@ -2,11 +2,11 @@ import template from './h4.pug';
 import './h4.scss';
 
 export default {
-  name: 'H4',
+  name: 'h4',
   data() {
     return {
       info: {
-        title: 'H4',
+        title: '19:30',
       },
     };
   },

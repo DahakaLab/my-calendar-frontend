@@ -2,11 +2,11 @@ import template from './h1.pug';
 import './h1.scss';
 
 export default {
-  name: 'H1',
+  name: 'h1',
   data() {
     return {
       info: {
-        title: 'H1',
+        title: 'Мой календарь',
       },
     };
   },

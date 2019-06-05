@@ -2,11 +2,11 @@ import template from './h2.pug';
 import './h2.scss';
 
 export default {
-  name: 'H2',
+  name: 'h2',
   data() {
     return {
       info: {
-        title: 'H2',
+        title: 'Друзья, мои подходы пока не закончились, делюсь с вами!',
       },
     };
   },
