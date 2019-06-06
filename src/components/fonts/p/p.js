@@ -2,7 +2,7 @@ import template from './p.pug';
 import './p.scss';
 
 export default {
-  name: 'p',
+  name: 'fontsP',
   data() {
     return {
       info: {

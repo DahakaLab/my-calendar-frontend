@@ -2,7 +2,7 @@ import template from './h4.pug';
 import './h4.scss';
 
 export default {
-  name: 'h4',
+  name: 'fontsH4',
   data() {
     return {
       info: {

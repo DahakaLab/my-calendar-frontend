@@ -2,7 +2,7 @@ import template from './h6.pug';
 import './h6.scss';
 
 export default {
-  name: 'h6 ',
+  name: 'fontsH6 ',
   data() {
     return {
       info: {
