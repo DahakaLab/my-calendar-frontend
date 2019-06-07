@@ -6,7 +6,8 @@ export default {
   data() {
     return {
       info: {
-        title: 'Румыния, Район берегов Лос-Сантес',
+        value: 'Румыния, Район берегов Лос-Сантес',
+        className: '',
       },
     };
   },

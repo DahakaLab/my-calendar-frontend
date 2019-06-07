@@ -6,7 +6,8 @@ export default {
   data() {
     return {
       info: {
-        title: '19 июня',
+        value: '19 июня',
+        className: '',
       },
     };
   },

@@ -6,7 +6,8 @@ export default {
   data() {
     return {
       info: {
-        title: 'Мы очень круто одохнули с Марусей',
+        value: 'Мы очень круто одохнули с Марусей',
+        className: '',
       },
     };
   },

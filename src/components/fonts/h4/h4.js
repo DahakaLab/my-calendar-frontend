@@ -6,7 +6,8 @@ export default {
   data() {
     return {
       info: {
-        title: '19:30',
+        value: '19:30',
+        className: '',
       },
     };
   },
