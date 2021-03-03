@@ -26,7 +26,7 @@
     "eslint-plugin-import": "^2.17.3",
     "file-loader": "^1.1.4",
     "node-sass": "^4.5.3",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-lint-loader": "0.0.4",
     "pug-loader": "^2.4.0",
     "sass-loader": "^6.0.6",
